@@ -13,16 +13,16 @@ This social network API is a great way to start your first social network. This 
 
 ## <a id="application">Application</a>
 
-## Start-up and User demo
+### Start-up and User demo
 ![USERandSTARTUPdemo](https://user-images.githubusercontent.com/95983252/179421787-7a1b09dd-9c08-4b46-9e01-5890d26186e1.gif)
 
-## Friends demo
+### Friends demo
 ![FRIENDSdemo](https://user-images.githubusercontent.com/95983252/179421781-39638aac-fba7-43d0-8d0b-9f57067603ec.gif)
 
-## Thoughts demo
+### Thoughts demo
 ![THOUGHTSdemo](https://user-images.githubusercontent.com/95983252/179421798-ffd763f7-d00e-4f4c-9412-becbace8ff33.gif)
 
-## Reactions demo
+### Reactions demo
 ![REACTIONSdemo](https://user-images.githubusercontent.com/95983252/179421814-f97e8077-89eb-461d-8b76-1b3a13309db0.gif)
 
 
