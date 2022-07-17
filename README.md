@@ -14,7 +14,10 @@ This social network API is a great way to start your first social network. This 
 ## <a id="application">Application</a>
 Here is the application in use:
 
-
+https://user-images.githubusercontent.com/95983252/179421593-c59db371-a505-4668-b7a4-b4bc22f99ea0.mp4
+https://user-images.githubusercontent.com/95983252/179421610-7e4676c7-99e9-469a-a20b-03ffaeaa653a.mp4
+https://user-images.githubusercontent.com/95983252/179421619-6b6b29dc-620c-465c-9a77-25f87ef3c146.mp4
+https://user-images.githubusercontent.com/95983252/179421622-a416246f-4c3f-484d-96b9-ebd05fd551f3.mp4
 
 ## <a id="roadmap">Roadmap</a>
 As development continues, this API will give a better foundation for social media platform creators to implement and begin their platform as quickly and efficiently as possible. Currently, the user and thought models are a great start. It would be great to add in moderator options for something like a forum site. This is something that is in development.
