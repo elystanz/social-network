@@ -61,33 +61,33 @@ const userController = {
   },
 
   // delete user and thoughts
-  //   deleteUser({ params }, res) {
-  //     Thought.deleteMany({ userId: params.id })
-  //       .then(() => {
-  //         User.findOneAndDelete({ userId: params.id })
-  //           .then(dbUserData => {
-  //             if (!dbUserData) {
-  //               res.status(404).json({ message: 'No one found with this ID!' });
-  //               return;
-  //             }
-  //             res.json(dbUserData);
-  //           });
-  //       })
-  //       .catch(err => res.json(err));
-  //   },
+    deleteUser({ params }, res) {
+      Thought.deleteMany({ userId: params.id })
+        .then(() => {
+          User.findOneAndDelete({ userId: params.id })
+            .then(dbUserData => {
+              if (!dbUserData) {
+                res.status(404).json({ message: 'No one found with this ID!' });
+                return;
+              }
+              res.json(dbUserData);
+            });
+        })
+        .catch(err => res.json(err));
+    },
 
   // delete user
-  deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
-      .then((dbUserData) => {
-        if (!dbUserData) {
-          res.status(404).json({ message: "No one found with this ID!" });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch((err) => res.status(400).json(err));
-  },
+  // deleteUser({ params }, res) {
+  //   User.findOneAndDelete({ _id: params.id })
+  //     .then((dbUserData) => {
+  //       if (!dbUserData) {
+  //         res.status(404).json({ message: "No one found with this ID!" });
+  //         return;
+  //       }
+  //       res.json(dbUserData);
+  //     })
+  //     .catch((err) => res.status(400).json(err));
+  // },
 
   // add friend
   addFriend({ params }, res) {

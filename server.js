@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -10,11 +13,17 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network', {
-  useFindAndModify: false,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/social-network";
+
+mongoose.connect(MONGODB_URI);
 // mongoose.set('debug', true);
 
-app.listen(PORT, () => console.log(`App listening on:${PORT}!`));
+mongoose.connection.on('connected', () =>
+  console.log('Connected to MongoDB Endpoint')
+  );
+
+  mongoose.connection.on('error', (err) =>
+  console.log(`MONGOOSE DISCONNECTED ERROR: ${err}`)
+  );
+  
+app.listen(PORT, () => console.log(`App listening on: ${PORT}!`));

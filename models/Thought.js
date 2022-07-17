@@ -13,7 +13,7 @@ const reactionSchema = new Schema(
       type: String,
       required: true,
       // keep the original tweet character length alive !
-      maxlength: 140,
+      maxlength: 280,
     },
 
     username: {
@@ -43,7 +43,7 @@ const ThoughtSchema = new Schema({
         type: String,
         required: true,
         minlength: 1,
-        maxlength: 140
+        maxlength: 280
     },
 
     createdAt: {
