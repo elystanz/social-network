@@ -16,7 +16,7 @@ const userSchema = new Schema(
       required: true,
       match: [
         // use a regular expression for email validation
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       ],
     },
 
@@ -33,7 +33,6 @@ const userSchema = new Schema(
         ref: "User",
       },
     ],
-
   },
 
   {

@@ -2,38 +2,40 @@ const { Schema, model, Types } = require('mongoose');
 // using moment to get date data for thoughts
 const moment = require('moment');
 
-const reactionSchema = new Schema({
+const reactionSchema = new Schema(
+  {
     reactionId: {
-        type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId()
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
     },
 
     reactionBody: {
-        type: String,
-        required: true,
-        // keep the original tweet character length alive !
-        maxlength: 140
+      type: String,
+      required: true,
+      // keep the original tweet character length alive !
+      maxlength: 140,
     },
 
     username: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
 
     createdAt: {
-        // use moment to set date and time data
-        type: Date,
-        default: Date.now,
-        get: createdAtVal => moment(createdAtVal).format('hh:mm a [on] MMM DD, YYYY')
-    }
-},
+      // use moment to set date and time data
+      type: Date,
+      default: Date.now,
+      get: (createdAtVal) =>
+        moment(createdAtVal).format("hh:mm a [on] MMM DD, YYYY"),
+    },
+  },
 
-    {
-        toJSON: {
-            virtuals: true,
-        },
-        id: false
-    }
+  {
+    toJSON: {
+      virtuals: true,
+    },
+    id: false,
+  }
 );
 
 const ThoughtSchema = new Schema({
